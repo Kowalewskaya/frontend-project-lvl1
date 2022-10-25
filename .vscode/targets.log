@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Wed Aug 24 09:36:08 2022
+# Make data base, printed on Wed Oct 19 16:10:42 2022
 
 # Variables
 
@@ -36,11 +36,11 @@ MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/w4/_2pwjx690dj88rsmkht_p6wh0000gn/T/vscode-ipc-7360fcdd-d11d-47e0-a68c-40a62410b37b.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/w4/_2pwjx690dj88rsmkht_p6wh0000gn/T/vscode-ipc-81a73b8b-78e6-4c98-bc30-66866c1e7155.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.gITCRAb52u/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.l9Pcvn1p8F/Render
 # environment
 PATH = /Users/kowalewskaya/.nvm/versions/node/v12.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # environment
@@ -52,7 +52,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.NanjpnNabf/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.DZkqcV64dJ/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -138,7 +138,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1699
+VSCODE_PID = 6396
 # variable set hash-table stats:
 # Load=64/1024=6%, Rehash=0, Collisions=1/88=1%
 
@@ -148,9 +148,9 @@ VSCODE_PID = 1699
 
 # Directories
 
-# . (device 16777220, inode 11407858): 13 files, no impossibilities.
+# . (device 16777220, inode 11407858): 15 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -184,11 +184,19 @@ brain-games:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-14 16:12:54
+#  Last modified 2022-09-01 14:08:54
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+brain-calc:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 17):
+	node bin/brain-calc.js
+	
 
 # Not a target:
 .DEFAULT:
@@ -196,12 +204,28 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
+brain-even:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 14):
+	node bin/brain-even.js
+	
+
 publish:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 8):
 	npm publish --dry-run
+	
+
+lint:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 11):
+	npx eslint .
 	
 
 install:
@@ -213,7 +237,7 @@ install:
 	
 
 # files hash-table stats:
-# Load=7/1024=1%, Rehash=0, Collisions=0/19=0%
+# Load=10/1024=1%, Rehash=0, Collisions=0/22=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -225,7 +249,7 @@ install:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Aug 24 09:36:08 2022
+# Finished Make data base on Wed Oct 19 16:10:42 2022
 
  
 make: *** No rule to make target `all'.  Stop.
