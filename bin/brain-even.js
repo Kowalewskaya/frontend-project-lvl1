@@ -1,18 +1,5 @@
 #!/usr/bin/env node
 
-import runGame from '../src/index.js';
+import runGame from '../src/games/even.js';
 
-const rulesOfTheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-const genQuestionAndAnswer = () => {
-  const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const randomNumber = getRandomNumber(1, 20);
-  let result;
-  if (randomNumber % 2 === 0) {
-    result = { question: randomNumber, rightAnswer: 'yes' };
-  } else {
-    result = { question: randomNumber, rightAnswer: 'no' };
-  }
-  return result;
-};
-runGame(genQuestionAndAnswer, rulesOfTheGame);
+runGame();
