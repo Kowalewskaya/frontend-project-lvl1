@@ -19,6 +19,7 @@ const genQuestionAndAnswer = () => {
   if (divider === 0) {
     divider = 1;
   }
-  return { question: `${num1}, ${num2}`, rightAnswer: String(divider) };
+  const randomNumbers = arr.join(' ');
+  return { question: `${randomNumbers}`, rightAnswer: String(divider) };
 };
 runGame(genQuestionAndAnswer, rulesOfTheGame);
