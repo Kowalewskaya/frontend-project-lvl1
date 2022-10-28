@@ -1,21 +1,14 @@
-const nod = () => {
+const genProgression = (startProgression, progressionLength, stepProgression) => {
+  const arr = [];
+  const censored = '..';
   const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  let result = 0;
-  const num1 = getRandomNumber(1, 100);
-  console.log(num1);
-  const num2 = getRandomNumber(1, 100);
-  console.log(num2);
-  const arr = [num1, num2];
-  const lesserNumber = Math.min(...arr);
-  for (let i = 2; i <= lesserNumber; i += 1) {
-    if (num1 % i === 0 && num2 % i === 0) {
-      result = i;
-    }
+  const randomElementProgression = getRandomNumber(0, progressionLength - 1);
+  for (let i = startProgression; arr.length <= progressionLength - 1; i += stepProgression) {
+    arr.push(i);
   }
-  if (result === 0) {
-    result = 1;
-  }
-  console.log(result);
-  return result;
+  arr[randomElementProgression] = censored;
+  console.log(arr.join(' '));
+  return arr.join(' ');
 };
-nod();
+
+genProgression(5, 7, 2);
