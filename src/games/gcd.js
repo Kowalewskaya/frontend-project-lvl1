@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 import runGame from '../index.js';
+import { genRandomNumber } from '../helpers.js';
 
 const rulesOfTheGame = 'Find the greatest common divisor of given numbers.';
 
 const genQuestionAndAnswer = () => {
-  const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const num1 = getRandomNumber(1, 100);
-  const num2 = getRandomNumber(1, 100);
+  const num1 = genRandomNumber(1, 100);
+  const num2 = genRandomNumber(1, 100);
   const arr = [num1, num2];
   const lesserNumber = Math.min(...arr);
   let divider = 0;

@@ -1,23 +1,13 @@
 #!/usr/bin/env node
 
 import runGame from '../index.js';
+import { genRandomNumber, isPrime } from '../helpers.js';
 
 const rulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const genQuestionAndAnswer = () => {
-  const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const randomNumber = getRandomNumber(1, 20);
-  const isPrime = () => {
-    if (randomNumber < 2) {
-      return false;
-    }
-    for (let i = 2; i <= randomNumber / 2; i += 1) {
-      if (randomNumber % i === 0) {
-        return false;
-      }
-    }
-    return true;
-  };
+  const randomNumber = genRandomNumber(1, 20);
+  isPrime(randomNumber);
   let result;
   if (isPrime() === true) {
     result = { question: randomNumber, rightAnswer: 'yes' };

@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
 import runGame from '../index.js';
+import { genRandomNumber } from '../helpers.js';
 
 const rulesOfTheGame = 'What number is missing in the progression?';
 
 const genQuestionAndAnswer = () => {
-  const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const progressionLength = getRandomNumber(5, 10);
-  const startProgression = getRandomNumber(1, 20);
-  const stepProgression = getRandomNumber(1, 5);
-  const randomElementProgression = getRandomNumber(0, progressionLength - 1);
+  const progressionLength = genRandomNumber(5, 10);
+  const startProgression = genRandomNumber(1, 20);
+  const stepProgression = genRandomNumber(1, 5);
+  const randomElementProgression = genRandomNumber(0, progressionLength - 1);
   const arr = [];
   const censored = '..';
   for (let i = startProgression; arr.length <= progressionLength - 1; i += stepProgression) {

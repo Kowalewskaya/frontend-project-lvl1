@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 
 import runGame from '../index.js';
+import { genRandomNumber } from '../helpers.js';
 
 const rulesOfTheGame = 'What is the result of the expression?';
 
 const genQuestionAndAnswer = () => {
-  const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
   const arithmeticSigns = ['+', '-', '*'];
-  const sign = arithmeticSigns[getRandomNumber(0, 2)];
+  const sign = arithmeticSigns[genRandomNumber(0, 2)];
 
-  const randomNumberOne = getRandomNumber(1, 20);
-  const randomNumberTwo = getRandomNumber(1, 20);
+  const randomNumberOne = genRandomNumber(1, 20);
+  const randomNumberTwo = genRandomNumber(1, 20);
 
   let answer = 0;
   let result;
