@@ -9,7 +9,7 @@ const genQuestionAndAnswer = () => {
   const randomNumber = genRandomNumber(1, 20);
   isPrime(randomNumber);
   let result;
-  if (isPrime() === true) {
+  if (isPrime(randomNumber) === true) {
     result = { question: randomNumber, rightAnswer: 'yes' };
   } else {
     result = { question: randomNumber, rightAnswer: 'no' };
