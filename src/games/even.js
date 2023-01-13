@@ -7,13 +7,7 @@ const rulesOfTheGame = 'Answer "yes" if the number is even, otherwise answer "no
 
 const genQuestionAndAnswer = () => {
   const randomNumber = genRandomNumber(1, 20);
-  let result;
-  if (randomNumber % 2 === 0) {
-    result = { question: randomNumber, rightAnswer: 'yes' };
-  } else {
-    result = { question: randomNumber, rightAnswer: 'no' };
-  }
-  return result;
+  return { question: randomNumber, rightAnswer: (randomNumber % 2 === 0) ? 'yes' : 'no' };
 };
 
 export default () => runGame(genQuestionAndAnswer, rulesOfTheGame);

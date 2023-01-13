@@ -8,12 +8,6 @@ const rulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer 
 const genQuestionAndAnswer = () => {
   const randomNumber = genRandomNumber(1, 20);
   isPrime(randomNumber);
-  let result;
-  if (isPrime(randomNumber) === true) {
-    result = { question: randomNumber, rightAnswer: 'yes' };
-  } else {
-    result = { question: randomNumber, rightAnswer: 'no' };
-  }
-  return result;
+  return { question: randomNumber, rightAnswer: (isPrime(randomNumber) === true) ? 'yes' : 'no' };
 };
 export default () => runGame(genQuestionAndAnswer, rulesOfTheGame);

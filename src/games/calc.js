@@ -13,24 +13,19 @@ const genQuestionAndAnswer = () => {
   const randomNumberTwo = genRandomNumber(1, 20);
 
   let answer = 0;
-  let result;
 
+  // eslint-disable-next-line default-case
   switch (sign) {
     case '+':
       answer = randomNumberOne + randomNumberTwo;
-      result = { question: `${randomNumberOne} + ${randomNumberTwo}`, rightAnswer: String(answer) };
       break;
     case '-':
       answer = randomNumberOne - randomNumberTwo;
-      result = { question: `${randomNumberOne} - ${randomNumberTwo}`, rightAnswer: String(answer) };
       break;
     case '*':
       answer = randomNumberOne * randomNumberTwo;
-      result = { question: `${randomNumberOne} * ${randomNumberTwo}`, rightAnswer: String(answer) };
       break;
-    default:
-      answer = null;
   }
-  return result;
+  return { question: `${randomNumberOne} ${sign} ${randomNumberTwo}`, rightAnswer: String(answer) };
 };
 export default () => runGame(genQuestionAndAnswer, rulesOfTheGame);

@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/Kowalewskaya/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Kowalewskaya/frontend-project-lvl1/actions)",
+  "description": "Quiz games in console",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
